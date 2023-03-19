@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Roboto-Condensed-Regular";
+  src: url("./assets/Roboto_Condensed/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Condensed-Title";
+  src: url("./assets/Roboto_Condensed/RobotoCondensed-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto-Condensed-Regular";
+  color: black;
+  background-color: #fff;
+}
