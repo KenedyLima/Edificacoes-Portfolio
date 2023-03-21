@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 
+export const SessionTitle = styled.h1`
+  text-transform: uppercase;
+  font-family: "Roboto-Condensed-Title";
+  font-size: 3rem;
+  margin-bottom: 2rem;
+`;
+
+export const SessionSubtitle = styled.h2`
+  font-family: "Roboto-Condensed-Title";
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+`;
+
 const Container = styled.div`
   color: black;
   padding: 3.6rem;
   width: 60%;
-  & h1 {
-    text-transform: uppercase;
-    font-family: "Roboto-Condensed-Title";
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  & h2 {
-    font-family: "Roboto-Condensed-Title";
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
-  }
-
   & p {
     font-size: 1.6rem;
   }
@@ -36,7 +36,7 @@ export default function Sobre() {
   const age = getAge();
   return (
     <Container>
-      <h1>Sobre</h1>
+      <SessionTitle>Sobre</SessionTitle>
       <p>
         Me chamo Jeferson Kenedy, tenho {age} anos e atualmente estou cursando o
         último ano do Ensino Médio integrado ao técnico no IFBA - Instituto
@@ -55,7 +55,7 @@ export default function Sobre() {
         quam non. Quisquam exercitationem officia, similique iure maiores magni
         quae.
       </p>
-      <h2>Educação</h2>
+      <SessionSubtitle>Educação</SessionSubtitle>
       <EducationList>
         <li>
           <p>
