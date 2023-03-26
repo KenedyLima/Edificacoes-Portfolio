@@ -66,7 +66,7 @@ export default function Sobre() {
         <li>
           <p>
             Bolsista em Projeto de Computação Quântica na UFOB - Universidade
-            Federal do Oeste Bahiano. (2022 - 2023)
+            Federal do Oeste da Bahia. (2022 - 2023)
           </p>
         </li>
         <li>

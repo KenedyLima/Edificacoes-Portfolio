@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { SessionSubtitle, SessionTitle } from "./Sobre";
-import PlantaUm from "./assets/Projetos/Planta 1.png";
+import PlantaUm from "./assets/Projetos/Projeto.png";
 import ProjetosCarrosel from "./Components/ProjetosCarrosel";
 const Container = styled.div`
   padding: 3.6rem;
-  background-color: #92400e;
+  background-color: #1d0d03;
   color: #fff;
 `;
 
@@ -21,8 +21,21 @@ export default function Projetos() {
         Os projetos apresentados abaixo foram projetos utilizados para estudo e
         muitos não são de minha autoria.
       </Paragraph>
-      <SessionSubtitle>Projeto 1</SessionSubtitle>
-      <ProjetosCarrosel plantas={[PlantaUm]} />
+
+      <ProjetosCarrosel
+        numeroProjeto="Projeto 1"
+        plantas={[PlantaUm, PlantaUm, PlantaUm]}
+      />
+
+      <ProjetosCarrosel
+        numeroProjeto="Projeto 2"
+        plantas={[PlantaUm, PlantaUm, PlantaUm, PlantaUm]}
+      />
+
+      <ProjetosCarrosel
+        numeroProjeto="Projeto 3"
+        plantas={[PlantaUm, PlantaUm, PlantaUm]}
+      />
     </Container>
   );
 }

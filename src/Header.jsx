@@ -75,8 +75,8 @@ export default function Header() {
         <NavigationBar>
           <NavList>
             <NavItem>Sobre</NavItem>
-            <NavItem>Habilidades</NavItem>
             <NavItem>Projetos</NavItem>
+            <NavItem>Contatos</NavItem>
           </NavList>
         </NavigationBar>
         <HeaderText>
