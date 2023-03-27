@@ -19,4 +19,5 @@ html {
   font-family: "Roboto-Condensed-Regular";
   color: black;
   background-color: #fff;
+  overflow-x: hidden;
 }

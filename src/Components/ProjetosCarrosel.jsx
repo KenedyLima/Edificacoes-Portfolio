@@ -21,10 +21,10 @@ const PlantaContainer = styled.div`
 `;
 
 const PlantasWrapper = styled.div`
-  width: 50rem;
+  width: 52rem;
   height: 36rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  background-color: red;
   margin-top: 3rem;
   & .planta.current {
     display: block;
@@ -35,39 +35,53 @@ const PlantasWrapper = styled.div`
 const ArrowCss = css`
   position: absolute;
   top: 50%;
-  color: green;
+  z-index: 10;
+  font-size: 3.6rem;
 `;
 const ArrowForWrapper = styled.div`
   ${ArrowCss}
   right: 0;
-  transform: translate(50%, -50%);
+  transform: translate(50%, calc(-50% - 2rem));
 `;
 
 const ArrowBackWrapper = styled.div`
   ${ArrowCss}
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 2rem));
 `;
 export default function ProjetosCarrosel({ numeroProjeto, plantas }) {
   /*<ion-icon
     className="arrow arrow-back"
     name="arrow-back-circle-outline"
   ></ion-icon>;*/
-  let currentPlanta = 0;
-  useEffect(() => {
-    const plantasEl = document.querySelectorAll(".planta");
+  let [currentPlanta, setCurrentPLanta] = useState(0);
+  const plantasWrapperRef = useRef();
+  /*useEffect(() => {
+    const plantasEl = plantasWrapperRef.current.querySelectorAll(".planta");
+    console.log(plantasEl.length);
     if (plantasEl.length >= 3) {
-      currentPlanta = 1;
+      setCurrentPLanta(1);
       plantasEl.forEach((el, index) => {
         if (index === 0) el.style.transform = "translateX(-100%)";
         if (index > 1) el.style.transform = `translateX(${(index - 1) * 100}%)`;
       });
     }
   }, []);
+*/
+  const nextPlanta = function () {
+    const plantasEl = plantasWrapperRef.current.querySelectorAll(".planta");
+    plantasEl.forEach((planta) => {});
+  };
 
-  return (
+  return; /*(
     <Container>
       <SessionSubtitle>{numeroProjeto}</SessionSubtitle>
-      <PlantasWrapper>
+      <PlantasWrapper ref={plantasWrapperRef}>
+        <ArrowBackWrapper>
+          <ion-icon
+            className="arrow arrow-back"
+            name="arrow-back-circle-outline"
+          ></ion-icon>
+        </ArrowBackWrapper>
         {plantas.map((planta, index) => {
           return (
             <PlantaContainer
@@ -77,7 +91,13 @@ export default function ProjetosCarrosel({ numeroProjeto, plantas }) {
             />
           );
         })}
+        <ArrowForWrapper>
+          <ion-icon
+            className="arrow arrow-back"
+            name="arrow-forward-circle-outline"
+          ></ion-icon>
+        </ArrowForWrapper>
       </PlantasWrapper>
     </Container>
-  );
+  );*/
 }

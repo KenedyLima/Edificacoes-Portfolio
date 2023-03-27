@@ -62,8 +62,8 @@ const FormWrapper = styled.div`
   grid-template-rows: 5rem 1fr;
   width: 70%;
   row-gap: 2rem;
-  background-color: #1d0d03;
-
+  //background-color: #1d0d03;
+  background-color: #4a3d35;
   color: white;
   border-radius: 10px;
 `;
