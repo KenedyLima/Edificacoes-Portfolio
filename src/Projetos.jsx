@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1.4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4.8rem;
 `;
 
 const ProjetosContainer = styled.div`
@@ -24,7 +24,7 @@ const ProjetosContainer = styled.div`
 
 export default function Projetos() {
   return (
-    <Container>
+    <Container id="projetos-session">
       <SessionTitle>Projetos</SessionTitle>
       <Paragraph>
         Os projetos apresentados abaixo foram projetos utilizados para estudo e

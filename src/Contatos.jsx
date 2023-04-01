@@ -7,7 +7,7 @@ const InputLabelCss = css`
   font-size: 1.4rem;
 `;
 const Container = styled.div`
-  padding: 3.6rem;
+  padding: 4.8rem;
   & h1 {
   }
 `;
@@ -88,7 +88,7 @@ const FormH1 = styled.h1`
 `;
 export default function Contatos() {
   return (
-    <Container>
+    <Container id="contatos-session">
       <SessionTitle>Contatos</SessionTitle>
       <FormWrapper>
         <FormH1>envie-me um email</FormH1>

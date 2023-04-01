@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "./assets/myself2.jpg";
 import helmet from "./assets/helmet.png";
 import pattern from "./assets/pattern.jpg";
+import VoltarTopoButton from "./Components/VoltarTopoButton";
 const Container = styled.div`
   position: relative;
   height: 100vh;
@@ -34,22 +34,18 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   font-size: 1.8rem;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
-  &:hover {
+  text-transform: capitalize;
+  & a:link,
+  a:visited {
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+    color: #000;
+  }
+
+  & a:hover,
+  a:active {
     color: #ae866f;
   }
-`;
-
-const PhotoContainer = styled.div`
-  background-image: url(${photo});
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  right: 10rem;
-  top: 50%;
-  height: 70rem;
-  width: 36rem;
-  border-radius: 10px;
 `;
 
 const Icon = styled.div`
@@ -74,9 +70,15 @@ export default function Header() {
         <Icon></Icon>
         <NavigationBar>
           <NavList>
-            <NavItem>Sobre</NavItem>
-            <NavItem>Projetos</NavItem>
-            <NavItem>Contatos</NavItem>
+            <NavItem>
+              <a href="#sobre-session">Sobre</a>
+            </NavItem>
+            <NavItem>
+              <a href="#projetos-session">projetos</a>
+            </NavItem>
+            <NavItem>
+              <a href="#contatos-session">contatos</a>
+            </NavItem>
           </NavList>
         </NavigationBar>
         <HeaderText>
@@ -84,7 +86,7 @@ export default function Header() {
           <br /> Edificações
         </HeaderText>
       </GridContainer>
-      <PhotoContainer></PhotoContainer>
+      <VoltarTopoButton />
     </Container>
   );
 }
