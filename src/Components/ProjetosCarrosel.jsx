@@ -3,10 +3,14 @@ import styled, { css } from "styled-components";
 import { SessionSubtitle } from "../Sobre";
 
 const Container = styled.div`
-  height: 42rem;
-  width: 68rem;
+  height: 36rem;
+  width: 62rem;
   margin-left: 50%;
   transform: translateX(-50%);
+  @media only screen and (max-width: 700px) {
+    width: 48rem;
+    height: 32rem;
+  }
 `;
 
 const ArrowCss = css`

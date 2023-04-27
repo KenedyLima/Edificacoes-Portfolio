@@ -9,9 +9,10 @@ import P1FachadaFrontal from "./assets/Projetos/P1_fachada_frontal.png";
 import P1FachadaPosterior from "./assets/Projetos/P1_fachada_posterior.png";
 import P1FachadaLateralD from "./assets/Projetos/P1_fachada_lateralD.png";
 import P1FachadaLateralE from "./assets/Projetos/P1_fachada_lateralE.png";
+import { ContainerPadding } from "./Header";
+
 const Container = styled.div`
-  padding: 7.2rem;
-  //background-color: #451a03;
+  ${ContainerPadding}
   background-color: #4a3d35;
   color: #fff;
   overflow-x: hidden;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import helmet from "./assets/icons/helmet.png";
 import pattern from "./assets/pattern.jpg";
 import VoltarTopoButton from "./Components/VoltarTopoButton";
@@ -11,10 +11,16 @@ const Container = styled.div`
     url(${pattern});
   background-position: center;
   background-size: cover;
-  background-color: #78350f;
+
   @media only screen and (max-width: 700px) {
-    height: 50vh;
+    height: 30vh;
   }
+  @media only screen and (max-width: 500px) {
+    padding: 2.6rem 3rem;
+  }
+`;
+export const ContainerPadding = css`
+  padding: 3.6rem;
 `;
 
 const GridContainer = styled.div`

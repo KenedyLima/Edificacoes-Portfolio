@@ -4,6 +4,7 @@ import photo from "./assets/me.jpg";
 import location from "./assets/icons/location.png";
 import id from "./assets/icons/id-card.png";
 import clock from "./assets/icons/clock.png";
+import { ContainerPadding } from "./Header";
 
 export const LinkCss = css`
   & a:link,
@@ -62,7 +63,8 @@ export const SessionSubtitle = styled.h2`
 `;
 
 const Container = styled.div`
-  padding: 4.8rem 7.2rem 7.2rem 7.2rem;
+  ${ContainerPadding}
+  paddint-top: 4.8rem;
   & h1 {
     margin-bottom: 3rem;
   }

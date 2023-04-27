@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled, { css } from "styled-components";
 import { LinkCss, SessionTitle, TopicTitle } from "./Sobre";
+import { ContainerPadding } from "./Header";
 
 const InputLabelCss = css`
   font-size: 1.4rem;
@@ -9,7 +10,8 @@ const InputLabelCss = css`
   }
 `;
 const Container = styled.div`
-  padding: 7.2rem 7.2rem 4.8rem 7.2rem;
+  ${ContainerPadding}
+  padding-bottom: 4.8rem;
 `;
 
 const Form = styled.form`

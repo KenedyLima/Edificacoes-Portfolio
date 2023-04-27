@@ -15,6 +15,9 @@ const Button = styled.button`
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
+  @media only screen and (max-width: 700px) {
+    right: 2rem;
+    bottom: 2rem;
 `;
 
 export default function VoltarTopoButton() {
