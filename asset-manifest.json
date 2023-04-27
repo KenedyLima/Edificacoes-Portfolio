@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Edificacoes-Portfolio/static/css/main.096e61ac.css",
+    "main.js": "/Edificacoes-Portfolio/static/js/main.9fdb6b3b.js",
+    "static/media/pattern.jpg": "/Edificacoes-Portfolio/static/media/pattern.50b07a07797e868a18b1.jpg",
+    "static/media/me.jpg": "/Edificacoes-Portfolio/static/media/me.fa476ee9acc303f85c7a.jpg",
+    "static/media/RobotoCondensed-Regular.ttf": "/Edificacoes-Portfolio/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
+    "static/media/RobotoCondensed-Bold.ttf": "/Edificacoes-Portfolio/static/media/RobotoCondensed-Bold.c5fe6deebafaec078e64.ttf",
+    "static/media/P1_planta_baixa.png": "/Edificacoes-Portfolio/static/media/P1_planta_baixa.0db9ce1237f27a7b5f1c.png",
+    "static/media/P1_cortebb.png": "/Edificacoes-Portfolio/static/media/P1_cortebb.4249d4ae05e271912fba.png",
+    "static/media/P1_corteaa.png": "/Edificacoes-Portfolio/static/media/P1_corteaa.1524bfc199166ab9933b.png",
+    "static/media/P1_fachada_lateralE.png": "/Edificacoes-Portfolio/static/media/P1_fachada_lateralE.811c2b121537d7e3f1f8.png",
+    "static/media/P1_fachada_lateralD.png": "/Edificacoes-Portfolio/static/media/P1_fachada_lateralD.87276571bc84c65954bd.png",
+    "static/media/P1_fachada_frontal.png": "/Edificacoes-Portfolio/static/media/P1_fachada_frontal.f2891a89025943b7c00d.png",
+    "static/media/P1_fachada_posterior.png": "/Edificacoes-Portfolio/static/media/P1_fachada_posterior.e9f1babbf038552eddd0.png",
+    "index.html": "/Edificacoes-Portfolio/index.html",
+    "main.096e61ac.css.map": "/Edificacoes-Portfolio/static/css/main.096e61ac.css.map",
+    "main.9fdb6b3b.js.map": "/Edificacoes-Portfolio/static/js/main.9fdb6b3b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.096e61ac.css",
+    "static/js/main.9fdb6b3b.js"
+  ]
+}
