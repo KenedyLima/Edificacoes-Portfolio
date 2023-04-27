@@ -13,7 +13,7 @@ const Container = styled.div`
   background-size: cover;
   background-color: #78350f;
   @media only screen and (max-width: 700px) {
-    height: 75vh;
+    height: 50vh;
   }
 `;
 
@@ -75,6 +75,9 @@ const HeaderText = styled.div`
   font-family: "Roboto-Condensed-Title";
   margin-left: 3rem;
   text-transform: uppercase;
+  @media only screen and (max-width: 500px) {
+    font-size: 3.6rem;
+  }
 `;
 export default function Header() {
   return (

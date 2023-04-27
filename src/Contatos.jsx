@@ -66,6 +66,9 @@ const FormWrapper = styled.div`
   background-color: #4a3d35;
   color: white;
   border-radius: 10px;
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FormImage = styled.div`
@@ -76,6 +79,9 @@ const FormImage = styled.div`
   grid-column: 2/-1;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const FormH1 = styled.h1`

@@ -74,8 +74,12 @@ const InfoWrapper = styled.div`
   column-gap: 7.2rem;
   justify-content: center;
   @media only screen and (max-width: 700px) {
-    grid-template-columns: min-content;
-    align-content: center;
+    column-gap: 3.6rem;
+  }
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: calc(3 * 20.4rem);
+    row-gap: 3.6rem;
+    justify-items: center;
   }
 `;
 
@@ -88,6 +92,9 @@ const ProfileCard = styled.div`
   justify-content: center;
   border-radius: 10px;
   gap: 1.6rem;
+  @media only screen and (max-width: 500px) {
+    width: 20.4rem;
+  }
 `;
 
 const CardInfoLi = styled.ul`
@@ -117,8 +124,11 @@ const MoreInfoCard = styled.div`
   grid-column: 1/-1;
   padding: 3rem;
   font-size: 1.6rem;
+  min-height: 24rem;
   & p {
     margin-bottom: 1.2rem;
+  }
+  @media only screen and (max-width: 500px) {
   }
 `;
 
@@ -153,6 +163,8 @@ const Button = styled.button`
       background-color: white;
       z-index: 10;
     }
+  }
+ 
   }
 `;
 
