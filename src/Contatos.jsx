@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled, { css } from "styled-components";
-import { SessionTitle, TopicTitle } from "./Sobre";
-import Building from "./assets/building.png";
+import { LinkCss, SessionTitle, TopicTitle } from "./Sobre";
 
 const InputLabelCss = css`
   font-size: 1.4rem;
+  & textarea {
+    font-size: 1.4rem;
+  }
 `;
 const Container = styled.div`
-  padding: 4.8rem;
-  & h1 {
-  }
+  padding: 7.2rem 7.2rem 4.8rem 7.2rem;
 `;
 
 const Form = styled.form`
@@ -26,17 +26,18 @@ const Form = styled.form`
   }
 
   & .submit-button:hover {
-    background-color: #1d0d03;
+    background-color: #4a3d35;
     color: #fff;
     border: #fff solid 1px;
   }
 
-  & .mensagem-input {
+  & .mensagem {
     max-width: 100%;
     min-height: 10rem;
     max-height: 10rem;
     padding: 0.6rem 1.2rem;
-    ${InputLabelCss}
+    font-family: Roboto-Condensed-Regular;
+    ${InputLabelCss};
   }
 `;
 
@@ -60,9 +61,8 @@ const FormWrapper = styled.div`
   display: grid;
   grid-template-columns: 70% 1fr;
   grid-template-rows: 5rem 1fr;
-  width: 70%;
+  width: 70vw;
   row-gap: 2rem;
-  //background-color: #1d0d03;
   background-color: #4a3d35;
   color: white;
   border-radius: 10px;
@@ -86,31 +86,82 @@ const FormH1 = styled.h1`
   margin-top: 3.6rem;
   letter-spacing: 1.5px;
 `;
+
+const SocialWrapper = styled.div`
+  ${LinkCss}
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
+  & a:link,
+  a:active {
+    font-size: 1.4rem;
+    gap: 0.6rem;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & [name="logo-whatsapp"] {
+    font-size: 3rem;
+    color: green;
+  }
+`;
 export default function Contatos() {
+  const formRef = useRef();
+
+  const sendEmail = async function (e) {
+    e.preventDefault();
+
+    const nome = formRef.current.querySelector(".nome").value;
+    const email = formRef.current.querySelector(".email").value;
+    const mensagem = formRef.current.querySelector(".mensagem").value;
+    formRef.current.querySelector(".nome").value = "";
+    formRef.current.querySelector(".email").value = "";
+    formRef.current.querySelector(".mensagem").value = "";
+    const res = await fetch("/sendEmail", {
+      method: "POST",
+      body: new URLSearchParams({
+        nome: nome,
+        email: email,
+        mensagem: mensagem,
+      }),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+    const status = await res.text();
+
+    if (status === "OK") alert("Email enviado!");
+    else
+      alert(
+        "Não foi possível enviar o Email. Tente novamente mais tarde ou use outro meio de contato."
+      );
+  };
+
   return (
     <Container id="contatos-session">
       <SessionTitle>Contatos</SessionTitle>
+      <SocialWrapper>
+        <a target="_blank" href="https://wa.me/+5577981324172">
+          <ion-icon className="social-icon" name="logo-whatsapp"></ion-icon>
+          <span>Whatsapp</span>
+        </a>
+      </SocialWrapper>
       <FormWrapper>
         <FormH1>envie-me um email</FormH1>
-        <Form>
+        <Form ref={formRef} onSubmit={sendEmail}>
           <InputLabelWrapper>
             <Label htmlFor="email-retorno">Email</Label>
-            <Input
-              name="email-retorno"
-              type="text"
-              placeholder="Seu email para retorno..."
-            />
+            <Input name="email-retorno" className="email" type="text" />
           </InputLabelWrapper>
           <InputLabelWrapper>
             <Label htmlFor="nome">Nome</Label>
-            <Input name="nome" type="text" placeholder="Seu nome..." />
+            <Input name="nome" className="nome" type="text" />
           </InputLabelWrapper>
           <InputLabelWrapper>
             <Label htmlFor="mensagem">mensagem</Label>
-            <textarea
-              placeholder="Sua mensagem..."
-              className="mensagem-input"
-            ></textarea>
+
+            <textarea name="mensagem" className="mensagem"></textarea>
           </InputLabelWrapper>
           <Input type="submit" className="submit-button" />
         </Form>

@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import helmet from "./assets/helmet.png";
+import helmet from "./assets/icons/helmet.png";
 import pattern from "./assets/pattern.jpg";
 import VoltarTopoButton from "./Components/VoltarTopoButton";
 const Container = styled.div`
   position: relative;
   height: 100vh;
-  padding: 3.6rem 4.8rem;
+  padding: 5.4rem 6rem;
   background-image: linear-gradient(180deg, #ffffff00, #ffffffe0),
     url(${pattern});
   background-position: center;
   background-size: cover;
   background-color: #78350f;
+  @media only screen and (max-width: 700px) {
+    height: 75vh;
+  }
 `;
 
 const GridContainer = styled.div`
@@ -22,13 +25,23 @@ const GridContainer = styled.div`
   align-items: center;
 `;
 
-const NavigationBar = styled.nav``;
+const NavigationBar = styled.nav`
+  @media (max-width: 745px) {
+    display: none;
+  }
+`;
 
 const NavList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 3.6rem;
   list-style: none;
+`;
+
+const MenuHamburguer = styled.div`
+  @media (max-width: 745px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled.li`

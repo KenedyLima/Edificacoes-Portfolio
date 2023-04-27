@@ -1,19 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { SessionSubtitle, SessionTitle } from "./Sobre";
-import PlantaUm from "./assets/Projetos/Projeto.png";
 import ProjetosCarrosel from "./Components/ProjetosCarrosel";
-import Gallery from "./Components/Gallery";
+import P1PlantaBaixa from "./assets/Projetos/P1_planta_baixa.png";
+import P1CorteAA from "./assets/Projetos/P1_corteaa.png";
+import P1CorteBB from "./assets/Projetos/P1_cortebb.png";
+import P1FachadaFrontal from "./assets/Projetos/P1_fachada_frontal.png";
+import P1FachadaPosterior from "./assets/Projetos/P1_fachada_posterior.png";
+import P1FachadaLateralD from "./assets/Projetos/P1_fachada_lateralD.png";
+import P1FachadaLateralE from "./assets/Projetos/P1_fachada_lateralE.png";
 const Container = styled.div`
-  padding: 4.8rem;
-  //background-color: #1d0d03;
+  padding: 7.2rem;
+  //background-color: #451a03;
   background-color: #4a3d35;
   color: #fff;
+  overflow-x: hidden;
 `;
 
 const Paragraph = styled.p`
   font-size: 1.4rem;
-  margin-bottom: 4.8rem;
+  margin-bottom: 8.2rem;
 `;
 
 const ProjetosContainer = styled.div`
@@ -31,7 +37,17 @@ export default function Projetos() {
         muitos não são de minha autoria.
       </Paragraph>
 
-      <Gallery />
+      <ProjetosCarrosel
+        plantas={[
+          P1PlantaBaixa,
+          P1CorteAA,
+          P1CorteBB,
+          P1FachadaFrontal,
+          P1FachadaLateralD,
+          P1FachadaLateralE,
+          P1FachadaPosterior,
+        ]}
+      />
     </Container>
   );
 }
