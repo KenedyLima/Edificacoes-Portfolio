@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Edificacoes-Portfolio/static/css/main.096e61ac.css",
-    "main.js": "/Edificacoes-Portfolio/static/js/main.83736c9f.js",
+    "main.css": "/Edificacoes-Portfolio/static/css/main.e9a138a0.css",
+    "main.js": "/Edificacoes-Portfolio/static/js/main.0de54414.js",
     "static/media/pattern.jpg": "/Edificacoes-Portfolio/static/media/pattern.50b07a07797e868a18b1.jpg",
     "static/media/me.jpg": "/Edificacoes-Portfolio/static/media/me.fa476ee9acc303f85c7a.jpg",
     "static/media/RobotoCondensed-Regular.ttf": "/Edificacoes-Portfolio/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
@@ -14,11 +14,11 @@
     "static/media/P1_fachada_frontal.png": "/Edificacoes-Portfolio/static/media/P1_fachada_frontal.f2891a89025943b7c00d.png",
     "static/media/P1_fachada_posterior.png": "/Edificacoes-Portfolio/static/media/P1_fachada_posterior.e9f1babbf038552eddd0.png",
     "index.html": "/Edificacoes-Portfolio/index.html",
-    "main.096e61ac.css.map": "/Edificacoes-Portfolio/static/css/main.096e61ac.css.map",
-    "main.83736c9f.js.map": "/Edificacoes-Portfolio/static/js/main.83736c9f.js.map"
+    "main.e9a138a0.css.map": "/Edificacoes-Portfolio/static/css/main.e9a138a0.css.map",
+    "main.0de54414.js.map": "/Edificacoes-Portfolio/static/js/main.0de54414.js.map"
   },
   "entrypoints": [
-    "static/css/main.096e61ac.css",
-    "static/js/main.83736c9f.js"
+    "static/css/main.e9a138a0.css",
+    "static/js/main.0de54414.js"
   ]
 }
