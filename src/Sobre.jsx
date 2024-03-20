@@ -146,6 +146,7 @@ const Button = styled.button`
   box-shadow: none;
   border: none;
   background-color: #fff;
+  width: min-content;
   font-size: 1.8rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -193,6 +194,10 @@ const SobreTab = styled.div`
 const EducacaoTab = styled.div`
   ${TabCss}
 `;
+
+const ExperienciaTab = styled.div`
+${TabCss}
+`
 export default function Sobre() {
   const cardRef = useRef();
   const changeTab = function (e) {
@@ -239,6 +244,9 @@ export default function Sobre() {
           </Button>
           <Button onClick={changeTab} className="info-button">
             Educação
+          </Button>
+          <Button onClick={changeTab} className="info-button">
+            Experiência
           </Button>
           <MoreInfoCard ref={cardRef}>
             <SobreTab className="current-tab tab">
@@ -299,6 +307,13 @@ export default function Sobre() {
                 </li>
               </EducacaoLista>
             </EducacaoTab>
+          <ExperienciaTab className="tab">
+          <div>
+            <CardInfoLi style={{marginBottom: "1.4rem"}}>MC4 Topografia</CardInfoLi>
+            <EducacaoLista>    <li><span>Atividades: <br></br>Pós-processamento de dados; Georreferenciamento de áreas; Produção de plantas topográficas, declarações de limites e memoriais descritivos; Cadastro Ambiental Rural.</span></li>
+        </EducacaoLista>
+          </div>
+          </ExperienciaTab>
           </MoreInfoCard>
         </MoreInfoGrid>
       </InfoWrapper>
