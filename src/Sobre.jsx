@@ -243,9 +243,7 @@ export default function Sobre() {
           <MoreInfoCard ref={cardRef}>
             <SobreTab className="current-tab tab">
               <p>
-                Estou à procura de estágio na área da construção civil para
-                conclusão do meu curso Técnico em Edificações, área que vejo
-                como possibilidade para seguimento de carreira.
+                À procura de atuar na área da engenharia civil como técnico em edificações
               </p>
               <p>
                 Possuo algumas habilidades importantes e que com certeza podem
@@ -276,7 +274,7 @@ export default function Sobre() {
               <EducacaoLista>
                 <li>
                   <span>
-                    Cursando 3° ano E.M. no Instituto Federal da Bahia - IFBA
+                    Ensino médio e técnico - IFBA
                     (2020 - 2023)
                   </span>
                 </li>
